@@ -1,8 +1,15 @@
 .strategy{
-  background-color: @basic_grey;
+
 }
 .strategy__list{
   list-style: none;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 20px;
+
+}
+.strategy__item{
+  background-color: @basic_grey;
 }
 .strategy__title{
   font-family: @oswald;
@@ -12,8 +19,7 @@ font-size: 24px;
 line-height: 37px;
 text-transform: uppercase;
 color: @black;
-padding-top: 30px;
-padding-bottom: 15px;
+
 }
 .strategy__description{
   font-family: @arial;
@@ -36,4 +42,43 @@ color: @black;
 padding-top: 20px;
 padding-bottom: 20px;
 text-decoration: none;
+}
+.strategy__cat-big{
+  display: none;
+}
+.strategy__wraper-small{
+  display: flex;
+  flex-direction: row;
+}
+@media (min-width:@tablet_width){
+  .strategy__cat-small{
+    display: none;
+  }
+  .strategy__cat-big{
+    display: block;
+    width: 200px;
+    height: 211px;
+  }
+  .strategy__wraper-big{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .strategy__list{
+    grid-gap:30px;
+  }
+}
+@media (min-width:@desktop-width){
+  .strategy__cat-small{
+    display: block;
+    width: 100px;
+    height: 100px;
+  }
+  .strategy__cat-big{
+    display: none;
+  }
+  .strategy__list{
+    grid-template-columns: 1fr 1fr;
+    grid-gap:80px;
+  }
 }
