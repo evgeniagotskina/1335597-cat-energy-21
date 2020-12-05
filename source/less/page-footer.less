@@ -1,3 +1,9 @@
 .page-footer{
-  background-color: @footer_background;
+  background-color: @basic_grey;
+}
+@media (min-width:@tablet_width){
+  .page-footer__center{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
