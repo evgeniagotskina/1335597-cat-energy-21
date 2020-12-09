@@ -1,22 +1,22 @@
 .main-form{
   font-family: @oswald;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 18px;
-text-transform: uppercase;
-color: @special_dark-grey;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @special_dark-grey;
 
 }
 .main-form__contacts-title,
 .main-form__comments-title,
 .main-form__additional-title{
   font-family: @oswald;
-font-style: normal;
-font-weight: normal;
-font-size: 24px;
-line-height: 26px;
-color: @black;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
+  color: @black;
 }
 .main-form__noborder{
   border:none;
@@ -29,4 +29,66 @@ color: @black;
 }
 .main-form__additional-checkbox{
   color: @black;
+}
+.main-form__parameters,
+.main-form__purpose{
+  border-bottom: 1px solid #D9D9D9;
+}
+.main-form__parameters-list{
+  margin: 0;
+  padding:0;
+}
+.main-form__parameters-item{
+  display:grid;
+  grid-template-columns: min-content 1fr;
+  grid-gap:13px;
+  margin-bottom: 10px;
+}
+.main-form__parameters-item input{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 30px;
+}
+.main-form__contacts-title{
+  padding-top: 26px;
+}
+.main-form__contacts-list{
+  margin: 0;
+  padding: 0;
+}
+.main-form__contacts-item{
+  display:grid;
+  grid-template-columns: min-content 1fr;
+  grid-gap:12px;
+}
+.main-form__comments-title{
+  padding-top: 65px;
+  padding-bottom: 76px;
+  border-bottom: 1px solid #D9D9D9;
+}
+.main-form__comments-text-container{
+  display:grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width:@tablet_width){
+  .main-form__additional-list{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width:@desktop-width){
+  .main-form__container-parameter-purpose{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 80px;
+  }
+  .main-form__contacts-list{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 80px;
+  }
+  .main-form__additional-list{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }

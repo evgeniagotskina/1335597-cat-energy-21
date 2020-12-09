@@ -8,6 +8,9 @@ color: @black;
 }
 .advantages__list{
   list-style: none;
+  display: grid;
+  grid-gap:20px;
+  padding: 0;
 }
 .advantages__item-description{
   font-family: @arial;
@@ -16,4 +19,27 @@ font-weight: normal;
 font-size: 14px;
 line-height: 18px;
 color: @special_dark-grey;
+margin: 0;
+}
+.advantages__item{
+  display: grid;
+  grid-template-columns:min-content 1fr;
+  grid-gap: 20px;
+}
+@media (min-width:@tablet_width){
+  .advantages__item{
+    display: block;
+  }
+  .advantages__list{
+    display: grid;
+    grid-template-columns: 325px 325px;
+    grid-gap:80px;
+  }
+}
+@media (min-width:@desktop-width){
+  .advantages__list{
+    display: grid;
+    grid-template-columns: 255px 255px 255px 255px;
+    grid-gap: 140px;
+  }
 }

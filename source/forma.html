@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html class="page page--forma" lang="ru">
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -19,10 +20,10 @@
             <div class="main-nav__center">
                 <ul class=" main-nav__list">
                     <li class="main-nav__item main-nav__item--active">
-                        <a class="main-nav__link">главная</a>
+                        <a class="main-nav__link" href="index.html">главная</a>
                     </li>
                     <li class="main-nav__item">
-                        <a class="main-nav__link" href="#">каталог продукции</a>
+                        <a class="main-nav__link" href="catalog.html">каталог продукции</a>
 
                     </li>
                     <li class="main-nav__item">
@@ -36,60 +37,56 @@
         <h1 class="page-main__title">Подбор программы</h1>
         <p class="page-main__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         <form class="main-form" method="GET" action="https://echo.htmlacademy.ru">
-            <fieldset class="main-form__parameters main-form__noborder">
-                <legend class="visually-hidden"> основные параметры животного</legend>
-                <ul class="main-form__list">
-                    <li>
-                        <label class="main-form__parameters-label" for="cat-name">имя:*
-          <input type="text" name="cat-name" id="cat-name" placeholder="Барсик">
-        </label>
-                    </li>
-                    <li>
-                        <label class="main-form__parameters-label" for="cat-weight">вес(кг):*
-          <input type="text" name="cat-weight" id="cat-weight" placeholder="7">
-        </label>
-                    </li>
-                    <li>
-                        <label class="main-form__parameters-label" for="cat-age">возраст(лет):
-          <input type="text" name="cat-age" id="cat-age" placeholder="7">
-        </label>
-                    </li>
-                </ul>
+            <div class="main-form__container-parameter-purpose">
+                <fieldset class="main-form__parameters main-form__noborder">
+                    <legend class="visually-hidden"> основные параметры животного</legend>
+                    <ul class="main-form__parameters-list">
+                        <li class="main-form__parameters-item">
+                            <label class="main-form__parameters-label" for="cat-name">имя:*</label>
+                            <input type="text" name="cat-name" id="cat-name" placeholder="Барсик">
+                        </li>
+                        <li class="main-form__parameters-item">
+                            <label class="main-form__parameters-label" for="cat-weight">вес(кг):*</label>
+                            <input type="text" name="cat-weight" id="cat-weight" placeholder="7">
+                        </li>
+                        <li class="main-form__parameters-item">
+                            <label class="main-form__parameters-label" for="cat-age">возраст(лет):</label>
+                            <input type="text" name="cat-age" id="cat-age" placeholder="7">
+                        </li>
+                    </ul>
 
-            </fieldset>
-            <fieldset class="main-form__purpose main-form__noborder">
-                <legend class="visually-hidden">цель подбора питания</legend>
-                <ul class="main-form__list">
-                    <li>
-                        <input type="radio" name="losing-weight" id="losing-weight">
-                        <label class="main-form__purpose-label" for="losing-weight">похудение
-        </label>
-                    </li>
-                    <li>
-                        <input type="radio" name="weight-gain" id="weight-gain">
-                        <label class="main-form__purpose-label" for="weight-gain">набор массы
-        </label>
-                    </li>
-                    <li>
-                        <input type="radio" name="undecided" id="undecided">
-                        <label class="main-form__purpose-label" for="undecided">не знаю(нужен ваш совет)
-        </label>
-                    </li>
-                </ul>
+                </fieldset>
+                <fieldset class="main-form__purpose main-form__noborder">
+                    <legend class="visually-hidden">цель подбора питания</legend>
+                    <ul class="main-form__list">
+                        <li>
+                            <input type="radio" name="losing-weight" id="losing-weight">
+                            <label class="main-form__purpose-label" for="losing-weight">похудение</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="weight-gain" id="weight-gain">
+                            <label class="main-form__purpose-label" for="weight-gain">набор массы</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="undecided" id="undecided">
+                            <label class="main-form__purpose-label" for="undecided">не знаю(нужен ваш совет)</label>
+                        </li>
+                    </ul>
 
-            </fieldset>
+                </fieldset>
+            </div>
             <fieldset class="main-form__contacts main-form__noborder">
-                <legend class=main-form__contacts-title>Контактные данные (владельца кота)</legend>
-                <ul class="main-form__list">
-                    <li>
+                <legend class="main-form__contacts-title">Контактные данные (владельца кота)</legend>
+                <ul class="main-form__contacts-list">
+                    <li class="main-form__contacts-item">
                         <label class="main-form__contacts-label" for="email">e-mail:*
-        <input type="email" name="email" id="email" required>
-      </label>
+                        </label>
+                        <input type="email" name="email" id="email" required>
                     </li>
-                    <li>
+                    <li class="main-form__contacts-item">
                         <label class="main-form__contacts-label" name="contact-tel">телефон:*
-        <input type="tel" name="contact-tel" id="contact-tel" required>
-      </label>
+                        </label>
+                        <input type="tel" name="contact-tel" id="contact-tel" required>
                     </li>
 
                 </ul>
@@ -97,13 +94,14 @@
             </fieldset>
             <fieldset class="main-form__comments main-form__noborder">
                 <legend class="main-form__comments-title">Комментарий</legend>
-                <textarea class="main-form__comments-text" name="comments" id="comments" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
-
+                <div class="main-form__comments-text-container">
+                    <textarea class="main-form__comments-text" name="comments" id="comments" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
+                </div>
             </fieldset>
             <fieldset class="main-form__additional main-form__noborder">
                 <legend class="main-form__additional-title">Дополнительно</legend>
 
-                <ul class="main-form__list">
+                <ul class="main-form__additional-list">
                     <li class="main-form__additional-checkbox">
                         <input class="visually-hidden main-form__additional-input-checkbox" type="checkbox" name="nosugar" id="nosugar" checked>
                         <label for="nosugar">сахарозаменитель</label>
@@ -138,7 +136,7 @@
 
             </div>
         </form>
-        <section class="contacts">
+        <section class="contacts contacts--form">
             <div class="contacts__center">
                 <h2 class="visually-hidden">контактная информация</h2>
                 <h3 class="contacts__title">приглашаем к сотрудничеству дилеров!</h3>
@@ -148,7 +146,7 @@
         </section>
         <section class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533261!2d30.320858716070592!3d59.93871648187617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1snl!2sru!4v1605609504692!5m2!1snl!2sru"
-                width="320" height="362" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </section>
     </main>
     <footer class="page-footer">

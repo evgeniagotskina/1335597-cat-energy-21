@@ -1,21 +1,31 @@
 .promo-block__slogan{
   font-family: @arial;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 20px;
-color: @white;
-padding-top: 18px;
-padding-bottom: 43px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: @white;
+  padding-top: 18px;
+  padding-bottom: 43px;
 }
 .promo-block{
-  background-image: url('/source/img/gift_photo.jpg');
+  background-image: url('/img/gift_photo.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 280px 289px;
+  background-color: @basic_green;
 }
 .promo-block__svg{
   padding-top: 60px;
   padding-bottom: 30px;
   padding-left: 101px;
 }
+@media (min-width:@tablet_width){
+  .promo-block{
+    background-image: url('/img/gift_photo_tablet.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 708px 200px;
+  }
+}
+

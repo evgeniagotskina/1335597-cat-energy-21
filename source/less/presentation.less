@@ -24,6 +24,7 @@ font-weight: normal;
 font-size: 24px;
 line-height: 24px;
 color: @black;
+
 }
 .presentation__parameter-desc{
   font-family: @arial;
@@ -41,6 +42,8 @@ font-size: 14px;
 line-height: 20px;
 text-transform: uppercase;
 color: @black;
+margin-top: 40px;
+text-align: center;
 }
 .presentation__range{
   font-family: @oswald;
@@ -49,4 +52,49 @@ font-weight: normal;
 font-size: 16px;
 line-height: 20px;
 text-transform: uppercase;
+}
+.presentation__parameter{
+  max-width: 124px;
+    width: 100%;
+    padding: 15px 10px 5px;
+    text-align: center;
+    border: 1px solid @spacial_grey;
+    border-radius: 5px;
+}
+.presentation__parameter-center{
+  max-width: 105px;
+  padding: 0 10px 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -30px;
+
+}
+.presentation__parameter-wraper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.presentation__img-wraper{
+  position: relative;
+}
+.presentation__img-cat-fat{
+  position: absolute;
+}
+@media (min-width:@tablet_width){
+  .presentation__parameter-wraper{
+    display: grid;
+    grid-template-columns: 162px 162px;
+    grid-gap:42px;
+  }
+  .presentation__parameter-table-flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  }
+}
+@media (min-width:@desktop-width){
+  .presentation{
+    display: flex;
+    flex-direction: column;
+  }
 }

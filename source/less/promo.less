@@ -1,27 +1,91 @@
 .promo{
-
   background-image: url('../img/background_green.jpg'), url('../img/background-cat.jpg');
   background-position:top center, top center;
   background-repeat:no-repeat, no-repeat;
-  background-size: 320px 302px, 320px 302px;
+  background-size: 100%, 100%;
   color:@white;
 }
 .promo__title{
   font-family: @oswald;
   font-style: normal;
   font-weight: normal;
-font-size: 36px;
-line-height: 36px;
-text-align: center;
-padding-top: 27px;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  padding-top: 27px;
 }
 .promo__slogan{
   font-family: @oswald;
   font-style: normal;
   font-weight: normal;
-font-size: 14px;
-line-height: 14px;
-text-transform: uppercase;
-text-align: center;
-padding-top: 25px;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 25px;
+}
+.promo__button{
+  display: block;
+}
+@media (min-width:@tablet_width){
+  .promo{
+    background-image: none;
+  }
+  .promo__wraper{
+    background-image: url('../img/cat_eat_pack_tablet.jpg');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 709px;
+    height: 609px;
+
+  }
+  .promo__title{
+    font-size: 60px;
+    line-height: 60px;
+    color:@black;
+    display: block;
+    width: 414px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .promo__slogan{
+    font-size: 20px;
+    line-height: 20px;
+    color:@black;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    text-align: left;
+  }
+  .promo__img{
+    display:none;
+  }
+  .promo__button{
+    width: 244px;
+    margin-top: 39px;
+
+  }
+  .promo__button span{
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+}
+@media (min-width:@desktop-width){
+  .promo__wraper{
+    background-image: none;
+  }
+  .promo{
+    position: relative;
+  }
+  .promo__img{
+    display: block;
+    position:absolute;
+    left:558px;
+    top:0;
+    width: 552px;
+    height: 499px;
+  }
 }

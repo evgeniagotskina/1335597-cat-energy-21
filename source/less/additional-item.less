@@ -1,19 +1,37 @@
 .additional-item__title{
   font-family: @oswald;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 16px;
-color: @spacial_dark-grey-2;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: @spacial_dark-grey-2;
 }
 .additional-item__table{
   font-family: @arial;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 14px;
-color: @special_dark-grey;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: @special_dark-grey;
 }
 .additional-item__button{
   border: none;
+  width: 100%;
+}
+@media (min-width:@tablet_width){
+  .additional-item__wraper{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width:@desktop-width){
+  .additional-item__center{
+    display:grid;
+    grid-template-columns: 1fr 244px;
+  }
+  .additional-item__grid-wraper{
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    grid-gap: 80px;
+  }
 }
