@@ -79,6 +79,7 @@ text-transform: uppercase;
 }
 .presentation__img-cat-fat{
   position: absolute;
+  display:none;
 }
 @media (min-width:@tablet_width){
   .presentation__parameter-wraper{
@@ -88,13 +89,21 @@ text-transform: uppercase;
   }
   .presentation__parameter-table-flex{
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   }
 }
 @media (min-width:@desktop-width){
   .presentation{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:80px;
+  }
+  .presentation__parameter-table-flex{
+    display: block;
+  }
+  .presentation__parameter-wraper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 42px;
   }
 }
